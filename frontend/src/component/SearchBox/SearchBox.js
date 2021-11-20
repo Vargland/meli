@@ -10,7 +10,6 @@ function SearchBox() {
                 <button className="searchbox__button" /> 
             </div>
         </div>
-        
     )
 }
 

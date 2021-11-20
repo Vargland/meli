@@ -3,12 +3,12 @@ import './Navbar.scss';
 
 function Navbar() {
     return (
-        <div className="navbar">
+        <nav className="navbar">
             <div className="navbar__logo"> </div>
             <div  className="navbar__searchbox">
                 <SearchBox />
             </div>
-        </div>
+        </nav>
     )
 }
 
