@@ -1,5 +1,6 @@
 
 import './Items.scss';
+
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { isEmpty } from 'lodash';
@@ -38,7 +39,8 @@ function Items() {
     return (
         <div className="items">
             <Navbar defaultValue={ searchValue } onSearch={ onSearch } />
-            <Results itemData={ data.results }/>
+            { data && data.results === undefined ? null : <Results dataResults={ data.results }/> }
+            
         </div>
     )
 }
