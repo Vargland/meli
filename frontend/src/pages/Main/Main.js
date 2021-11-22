@@ -1,11 +1,11 @@
 
-import './MainPage.scss';
+import './Main.scss';
 import { useNavigate } from 'react-router-dom';
 import { isEmpty } from 'lodash';
 
 import Navbar from '../../container/Navbar/Navbar';
 
-function MainPage() {
+function Main() {
     const navigate = useNavigate();
 
     function onSearch(currentValue) {
@@ -22,4 +22,4 @@ function MainPage() {
     )
 } 
 
-export default MainPage;
+export default Main;
