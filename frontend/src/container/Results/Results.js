@@ -1,9 +1,6 @@
 import './Results.scss';
-//import { useEffect, useState } from 'react';
 
 function Results({ dataResults }) {
-    console.log('dataResults', dataResults)
-
     const resultsList = dataResults.map((result) => {
         return (
             <div className="results__container">

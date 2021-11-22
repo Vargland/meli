@@ -39,8 +39,7 @@ function Items() {
     return (
         <div className="items">
             <Navbar defaultValue={ searchValue } onSearch={ onSearch } />
-            { data && data.results === undefined ? null : <Results dataResults={ data.results }/> }
-            
+            { data && data.results === undefined ? <div> Buscando... </div> : <Results dataResults={ data.results }/> }
         </div>
     )
 }
