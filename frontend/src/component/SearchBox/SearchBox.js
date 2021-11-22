@@ -1,7 +1,7 @@
 import './SearchBox.scss';
 import { useState } from 'react';
 
-function SearchBox({ onSearch }) {
+function SearchBox({ onSearch, defaultValue }) {
     const [ currentValue, setSearchValue ] = useState('');
 
     return (
@@ -10,7 +10,7 @@ function SearchBox({ onSearch }) {
                 <input
                     className="searchbox__input"
                     placeholder="Nunca dejes de buscar"
-                    value={ currentValue }
+                    defaultValue={ defaultValue }
                     onChange={ (event) => setSearchValue(event.target.value) }/>
             </div>
             <div className="searchbox__button__container">

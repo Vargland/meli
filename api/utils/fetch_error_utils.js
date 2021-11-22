@@ -1,5 +1,5 @@
 module.exports = {
-    errorUtils: ({ status, message }) => (
+    createError: ({ status, message }) => (
         {
             status,
             message

@@ -1,20 +1,13 @@
 import './Navbar.scss';
-import { isEmpty } from 'lodash';
 
 import SearchBox from '../../component/SearchBox/SearchBox';
 
-function Navbar() {
-    function onSearch(currentValue) {
-        if (isEmpty(currentValue)) {
-            return;
-        }
-    }
-
+function Navbar({ onSearch, defaultValue }) {
     return (
         <nav className="navbar">
             <div className="navbar__logo" />
             <div className="navbar__searchbox">
-                <SearchBox onSearch={ onSearch } />
+                <SearchBox  defaultValue={ defaultValue } onSearch={ onSearch } />
             </div>
         </nav>
     )

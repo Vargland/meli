@@ -3,21 +3,7 @@ const router = express.Router();
 const config = require('../config/config');
 const itemsService = require('../services/item_service')(config);
 
-router.get('/', async function (req, res, next) {
-    const { q, limit } = req.query;
-    try {
-        if (!q) throw {
-            status: 400,
-            message: 'A query parameter is required',
-        }
-        const results = await itemsService.searchItems(q, limit);
-        res.send(results);
-    } catch (err) {
-        next(err);
-    }
-});
-
-router.get('/:id', async function (req, res, next) {
+module.exports = router.get('/:id', async function (req, res, next) {
     try {
         const results = await itemsService.getItemById(req.params.id);
         res.send(results);
