@@ -3,7 +3,7 @@ const router = express.Router();
 const config = require('../config/config');
 const itemsService = require('../services/item_service')(config);
 
-module.exports = router.get('/:id', async function (req, res, next) {
+module.exports = router.use('/items/:id', async function (req, res, next) {
     try {
         const results = await itemsService.getItemById(req.params.id);
         res.send(results);

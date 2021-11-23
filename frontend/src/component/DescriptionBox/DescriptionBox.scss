@@ -1,0 +1,13 @@
+.description-box {
+    padding: 15px 0 0 20px;
+
+    &__paragraph {
+        color: #666;
+        white-space: pre-line;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 400;
+    }
+}

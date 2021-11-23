@@ -20,7 +20,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api', routers);
 
-
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development

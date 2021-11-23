@@ -1,4 +1,3 @@
-
 import './Items.scss';
 
 import { useEffect, useState } from 'react';

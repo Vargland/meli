@@ -17,13 +17,15 @@
         width: 100%;
     }
 
-    &__information {
+    &__description {
         display: flex;
         width: 100%;
 
         &__detail {
+            cursor: pointer;
             display: flex;
             flex-direction: column;
+            height: 100%;
             padding-left: 10px;
             width: 100%;
 
@@ -53,13 +55,14 @@
         }
 
         &__thumbnail {
+            cursor: pointer;
+            height: 160px;
+            width: 160px;
+
             &__container {
                 box-sizing: content-box;
                 padding: 0 10px;
             }
-
-            height: 160px;
-            width: 160px;
         }
     }
 }

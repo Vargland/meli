@@ -1,25 +1,33 @@
 import './Results.scss';
+import { useNavigate } from 'react-router-dom';
+
+import Thumbnail from '../../component/Thumbnail/Thumbnail';
 
 function Results({ dataResults }) {
-    const resultsList = dataResults.map((result) => {
+    const navigate = useNavigate();
+
+    function navigateProduct(id) {
+        navigate(`/items/${id}`);
+    }
+
+    const resultsList = dataResults.map((result, key) => {
+        const id = result.id;
+
         return (
-            <div className="results__container">
-                <div className="results__information">
-                    <div className="results__information__thumbnail__container">
-                        <img className="results__information__thumbnail" src={ result.thumbnail } />
+            <div className="results__container" key={key}>
+                <div className="results__description">
+                    <div className="results__description__thumbnail"  onClick={ () => navigateProduct(id) }>
+                        <Thumbnail size='small' source ={ result.thumbnail }/>
                     </div>
-                    <div className="results__information__detail">
-                        <span className="results__information__detail__price">$ { result.price } </span>
-                        <span className="results__information__detail__title"> { result.title } </span>
+                    <div className="results__description__detail"  onClick={ () => navigateProduct(id) }>
+                        <span className="results__description__detail__price">$ { result.price } </span>
+                        <span className="results__description__detail__title"> { result.title } </span>
                     </div>
-                    <div className="results__information__location">
-                            <span> { result.address.state_name } </span>
-                        <div>
-                        </div>
+                    <div className="results__description__location">
+                        <span> { result.address.state_name } </span>
                     </div>
                 </div>
             </div>
-
         )
     })
 

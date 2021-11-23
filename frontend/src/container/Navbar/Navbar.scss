@@ -1,4 +1,4 @@
-@import '../../variables';
+@import '../../_variables';
 
 .navbar {
     align-items: center;
@@ -14,6 +14,7 @@
         background-repeat: no-repeat;
         height: 35px;
         margin: 0px 15px;
+        cursor: pointer;
         width: 135px;
     }
 
