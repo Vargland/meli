@@ -20,7 +20,6 @@ function Description({ itemDetail, itemDescription }) {
             setItem(itemDetail);
         }
     },[ itemDetail, itemDescription ]);
-    // TODO CREATE CONTAINER COMPONENT
     return (
         <div className="description">
             <div className="description__container">
