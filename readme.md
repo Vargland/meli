@@ -1,25 +1,25 @@
 # Mercado Libre - Challenge Developer FrontEnd
 
-## Install proyect
+## Install project
 
 - `cd /api` and `npm install`
 - `cd /frontend` and  `npm install`
 
 
-## Run proyect
+## Run project
 - `cd /api` and `npm start`: Middleware is on port: 5000
 - `cd /frontend` and `npm start`: Frontend is on port: 3000
 
-**Note:** in this case, you need run the project in separated consoles.
+### or 
 
-**Windows:** I create **start.bat** whit this scripts:
+**Windows:** I create **start.bat** with this script:
 ```
     @echo off
     start cmd /c "cd api && npm start"
     start cmd /c "cd frontend && npm start"
 
 ```
-- You can execute this file to run both project.
+- You can execute this file to run both projects.
 
 ## Description Job.
 
