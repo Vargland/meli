@@ -2,7 +2,7 @@ import './Items.scss';
 
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { isEmpty} from 'lodash';
+import { isEmpty } from 'lodash';
 
 import { CONSTANTS } from '../../constants';
 
