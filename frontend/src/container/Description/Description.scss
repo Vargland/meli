@@ -3,15 +3,12 @@
 @import '../../_variables.scss';
 
 .description {
-    background-color: $backgroud-color;
     display: flex;
     justify-content: center;
-    padding: 25px;
 
     &__container {
         background-color: white;
         display: flex;
-        margin: 25px;
         padding: 10px;
         width: $width_container;
     }
@@ -19,5 +16,6 @@
     &__left {
         display: flex;
         flex-wrap: wrap;
+        width: 70%;
     }
 }

@@ -1,0 +1,28 @@
+.breadcrumb {
+    background-color: transparent;
+    margin: 15px 19.5%;
+
+    &__list {
+        display: flex;
+        padding: 0;
+
+        &__chevron {
+            padding: 0 6px;
+
+            span:last-child {
+                display: none;
+            }
+        }
+        
+        &__item {
+            display: inline-block;
+            text-decoration: none;
+
+        }
+
+        &__link {
+            color: #3483fa;
+            cursor: pointer;
+        }
+    }
+}

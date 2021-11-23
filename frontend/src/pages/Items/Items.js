@@ -2,7 +2,7 @@ import './Items.scss';
 
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { isEmpty } from 'lodash';
+import { isEmpty} from 'lodash';
 
 import { CONSTANTS } from '../../constants';
 
@@ -15,30 +15,32 @@ function Items() {
     const searchValue = searchParams.get('search');
 
     useEffect(() => {
-        const fetchData = async() => { 
-            const response = await fetch(`${CONSTANTS.API_URI}/search?q=${searchValue}&limit=4`);
+        const fetchData = async() => {
+                const response = await fetch(`${CONSTANTS.API_URI}/search?q=${searchValue}&limit=4`);
 
-            return response.json();
+                return response.json();
         }
-
+    
         //TODO MUST RETURN RESULTS. FIX SERVER RESPONSE.
         fetchData()
-            .then(res => setData(res))
+            .then(data => { 
+                setData(data);
+            })
             .catch(err => console.error(err))
-    }, [searchValue]);
+    }, [ searchValue ]);
 
     function onSearch(currentValue) {
         if (isEmpty(currentValue)) {
             return;
         }
 
-        setSearchParams({search: currentValue})
+        setSearchParams({ search: currentValue })
     }
-    
+
     return (
         <div className="items">
             <Navbar defaultValue={ searchValue } onSearch={ onSearch } />
-            { data && data.results === undefined ? <div> Buscando... </div> : <Results dataResults={ data.results }/> }
+            { data && data.results === undefined ? null : <Results dataResults={ data.results }/> }
         </div>
     )
 }

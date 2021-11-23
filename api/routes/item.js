@@ -6,6 +6,7 @@ const itemsService = require('../services/item_service')(config);
 module.exports = router.use('/items/:id', async function (req, res, next) {
     try {
         const results = await itemsService.getItemById(req.params.id);
+
         res.send(results);
     } catch (err) {
         next(err);

@@ -5,14 +5,13 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin: 15px 20%;
+    margin: 15px 19%;
 
     &__container {
         align-items: center;
         background-color: white;
         border-bottom: $border;
         display: flex;
-        height: 200px;
         padding: 15px;
         width: 100%;
     }
@@ -51,7 +50,6 @@
            justify-content: flex-end;
            line-height: 1.3;
            width: 150px;
-
         }
 
         &__thumbnail {
