@@ -21,7 +21,6 @@ function Items() {
                 return response.json();
         }
     
-        //TODO MUST RETURN RESULTS. FIX SERVER RESPONSE.
         fetchData()
             .then(data => { 
                 setData(data);
