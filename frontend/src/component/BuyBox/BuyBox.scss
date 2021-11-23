@@ -1,0 +1,47 @@
+.buybox {
+    width: 325px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__button {
+        background-color: #3483fa;
+        border: none;
+        border-color: transparent;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        width: 100%;
+
+        
+        &:hover {
+            background-color: darken(#3483fa, 10);
+
+            &:active {
+                background-color: darken(#3483fa, 30);
+                
+            }
+        }
+    }
+
+    &__condition {
+        color: rgba(0,0,0,.55);
+        font-size: 14px;
+        font-weight: 400;
+        white-space: pre-wrap;
+    }
+
+    &__price {
+        font-size: 45px;
+    }
+
+    &__title {
+        font-size: x-small; 
+    }
+}

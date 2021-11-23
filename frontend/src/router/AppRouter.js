@@ -9,7 +9,7 @@ function AppRouter() {
         <Routes>
             <Route index path='/' element={<MainPage/>} />
             <Route path='/items' element={<Items />} />
-            <Route path='/product/:id' element={<Product/>} />
+            <Route path='/items/:id' element={<Product/>} />
         </Routes>
     )
 }
