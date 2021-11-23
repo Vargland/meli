@@ -1,8 +1,3 @@
-// TODO BREADCRUMS --> key filters
-
-
-
-
 import './Product.scss'
 
 import { useParams, useNavigate } from 'react-router-dom';
